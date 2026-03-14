@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <form action="logar.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Sobre você</legend>
+            <label>Nome: <input type="text" name="nome"></label><br>
+            <label>Idade: <input type="number" name="idade"></label>
+        </fieldset>
+
+        <legend>Sexo</legend>
+        <label><input type="radio" name="sexo" value="Masculino">Masculino</label>
+        <label><input type="radio" name="sexo" value="Feminino">Feminino</label>
+
+        <legend>Marque seus esportes favoritos</legend>
+        <label><input type="checkbox" name="esporte[]" value="Basquete">Basquete</label><br>
+        <label><input type="checkbox" name="esporte[]" value="Futebol">Futebol</label><br>
+        <label><input type="checkbox" name="esporte[]" value="Bocha">Bocha</label>
+
+        <legend>Quao o sabor de seu sorvete preferido</legend>
+        <select name="saborFav">
+            <option value="Chocolate" selected>Chocolate</option>
+            <option value="Morango">Morango</option>
+            <option value="Creme">Creme</option>
+            <option value="Menta">Menta</option>
+            <option value="Uva">Uva</option>
+        </select>
+
+        <legend>Fale mais sobre você</legend>
+        <textarea name="sobrevc"></textarea><br>
+
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
