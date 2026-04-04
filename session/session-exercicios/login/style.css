@@ -17,7 +17,7 @@ main {
     width: 50vw;
     height: 50vh;
 }
-form, h1 {
+form{
     justify-self: center;
     padding-bottom: 60px;
 }

@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['login'])) {
-        header("Location: index.php");
-    }
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location: index.php");
+}
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <h1>Você está logado</h1>
-        <a href="logout.php"><button type="button">Deslogar</button></a>
-    </main>
+<main style="flex-direction: column">
+    <h1>Você está logado</h1>
+    <a href="logout.php">
+        <button type="button">Deslogar</button>
+    </a>
+</main>
 </body>
 </html>

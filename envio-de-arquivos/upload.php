@@ -11,3 +11,5 @@
             echo "Erro ao enviar arquivo!";
         }
     }
+?>
+<a href="index.html"><button>Voltar</button></a>
