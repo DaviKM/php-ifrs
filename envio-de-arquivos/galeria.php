@@ -3,7 +3,11 @@ $arquivos = scandir('arquivos/');
 
 $extensoes = [
         'imagens' => ["jpg", "jpeg", "png"],
-        'pdf' => '<i class="fa-brands fa-dochub"></i>'
+        'pdf' => '<i class="fa-brands fa-dochub"></i>',
+        'doc' => '<i class="fa-brands fa-wordpress"></i>',
+        'mp4' => '<i class="fa-brands fa-code"></i>',
+        'wav' => '<i class="fa-brands fa-windows"></i>',
+        'mp3' => '<i class="fa-brands fa-audio"></i>',
 ]
 ?>
 <!doctype html>
