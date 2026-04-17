@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    align-content: center;
+    background-color: rgb(21, 21, 21);
+    color: white;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+}
+
+form {
+    justify-self: center;
+    padding-bottom: 60px;
+}
+
+main * {
+    margin: 4px 0;
+}
+
+button {
+    display: flex;
+    justify-self: center;
+    padding: 6px;
+    background-color: #7f04d7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+
+
+a {
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: white;
+}
