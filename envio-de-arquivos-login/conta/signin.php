@@ -11,8 +11,7 @@ if (isset($_POST["submit"])) {
         if (!array_key_exists($usuario, $cadastros)) {
             $_SESSION['cadastros'][$usuario] = $senha;
             $_SESSION['login'] = $usuario;
-            setcookie('login', $usuario, time() + 3600);
-            header('Location: home.php');
+            header('Location: ./');
         }
     }
 }

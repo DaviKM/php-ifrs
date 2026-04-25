@@ -1,11 +1,13 @@
 <?php
 session_start();
-$_SESSION['login'] = $_COOKIE['login'] ?? null;
 if (!isset($_SESSION['cadastros'])) {
-    $_SESSION['cadastros'] = array();
+    $_SESSION['cadastros'] = [
+        'enviador_de_arquivos' => 'upload_mode_on',
+        'davi' => '123'
+    ];
 }
 if (isset($_SESSION["login"])) {
-    header("Location: home.php");
+    header("Location: ../");
 }
 
 ?>
@@ -20,7 +22,7 @@ if (isset($_SESSION["login"])) {
 <body>
 <main>
     <form action="login.php" method="post" enctype="multipart/form-data">
-        <label for="usuario">Usuário: </label><br>
+        <label for="usuario">Usuário:</label><br>
         <input type="text" id="usuario" name="usuario"><br>
 
         <label for="senha">Senha:</label><br>

@@ -1,8 +1,7 @@
 <?php
     session_start();
-    $_SESSION['login'] = $_COOKIE['login'] ?? null ;
     if(isset($_SESSION['login'])){
-        header("location: home.php");
+        header("location: ../");
     }
 ?>
 <!doctype html>
