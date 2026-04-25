@@ -1,4 +1,7 @@
-<?php $diretorio = scandir("arquivos/");?>
+<?php 
+require_once 'funcoes.php' ;
+$diretorio = scandir("arquivos/");
+?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -30,6 +33,7 @@
         $arquivos = $_POST["arquivo"];
         foreach ($arquivos as $arquivo) {
             unlink("arquivos/$arquivo") ;
+            escreveLog("Arquivo \"{$arquivo}\" foi removido") ;
         }
         header("Location: apagar.php");
     }

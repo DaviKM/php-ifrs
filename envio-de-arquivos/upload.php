@@ -1,4 +1,5 @@
 <?php
+require_once 'funcoes.php' ;
 if (isset($_FILES['arquivo'])) {
     $arquivo = $_FILES['arquivo'];
     $nome = basename($arquivo['name']);
@@ -10,6 +11,7 @@ if (isset($_FILES['arquivo'])) {
     else {
         if (move_uploaded_file($arquivo['tmp_name'], $caminho . $nome)) {
             echo "Arquivo enviado com sucesso! {$arquivo['name']}";
+            escreveLog("Arquivo \"{$arquivo['name']}\" foi salvo") ;
         } else {
             echo "Erro ao enviar arquivo!";
         }
