@@ -7,5 +7,5 @@ button {
     background-color: #316fe2;
     color: whitesmoke;
     border-radius: 4px;
-
+    cursor: pointer;
 }

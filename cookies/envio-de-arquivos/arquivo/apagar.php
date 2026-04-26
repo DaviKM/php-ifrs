@@ -1,4 +1,8 @@
 <?php 
+session_start() ;
+if ($_SESSION['login'] != 'enviador_de_arquivos') {
+    header("Location: ../");
+}
 require_once 'funcoes.php' ;
 $diretorio = scandir("arquivos/");
 ?>
@@ -22,7 +26,7 @@ $diretorio = scandir("arquivos/");
         }
         ?>
         <button name="submit">Apagar</button>
-        <a href="index.html">
+        <a href="../">
             <button type="button">Voltar</button>
         </a>
     </form>

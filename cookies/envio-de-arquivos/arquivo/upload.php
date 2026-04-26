@@ -1,4 +1,8 @@
 <?php
+session_start() ;
+if ($_SESSION['login'] != 'enviador_de_arquivos') {
+    header("Location: ../");
+}
 require_once 'funcoes.php' ;
 if (isset($_FILES['arquivo'])) {
     $arquivo = $_FILES['arquivo'];
@@ -18,6 +22,6 @@ if (isset($_FILES['arquivo'])) {
     }
 }
 ?>
-<a href="index.html">
+<a href="../">
     <button>Voltar</button>
 </a>

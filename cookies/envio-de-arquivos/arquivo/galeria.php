@@ -1,4 +1,8 @@
 <?php
+session_start() ;
+if ($_SESSION['login'] != 'enviador_de_arquivos') {
+    header("Location: ../");
+}
 $arquivos = scandir('arquivos/');
 
 $extensoes = [
@@ -42,7 +46,7 @@ $extensoes = [
 <a href="apagar.php">
     <button type="button">Deletar arquivo</button>
 </a>
-<a href="index.html">
+<a href="../">
     <button type="button">Voltar</button>
 </a>
 </body>
