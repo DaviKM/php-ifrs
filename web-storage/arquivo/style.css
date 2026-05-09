@@ -1,0 +1,25 @@
+body *{
+    margin: 6px;
+}
+button {
+    padding: 6px;
+    border: none;
+    background-color: #316fe2;
+    color: whitesmoke;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+nav {
+    bottom: 12px;
+    position:absolute;
+}
+
+.visuBlock {
+    display: block ;
+}
+
+.visuFlex {
+    display: flex;
+}
