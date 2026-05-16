@@ -10,7 +10,9 @@ button {
     cursor: pointer;
 }
 
-
+i {
+    font-size: 45px;
+}
 nav {
     bottom: 12px;
     position:absolute;

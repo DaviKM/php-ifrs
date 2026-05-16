@@ -59,12 +59,16 @@ $extensoes = [
         var display = document.getElementById('listaArquivos')
 
         if (display.className == 'visuBlock') {
-            display.className = 'visuFlex' 
+            display.classList.remove('visuBlock')
+            display.classList.add('visuFlex')
         } else if (display.className == 'visuFlex') {
-            display.className = 'visuBlock';
+            display.classList.add('visuBlock')
+            display.classList.remove('visuFlex')
         }
     
     }
+
+
 </script>
 
 </html>
