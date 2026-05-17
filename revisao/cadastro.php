@@ -1,3 +1,13 @@
+<?php 
+session_start();
+if (isset($_SESSION['nome'])){
+    header("Location: perfil.php") ;
+    
+}
+else {
+    echo 'NAO ESTÁ SETTADO' ;
+}
+?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -12,13 +22,13 @@
     <main>
         <form action="perfil.php" method="post" enctype="multipart/form-data">
             <label for="nome">Nome:</label><br>
-            <input type="text" name="nome" id="nome"><br>
+            <input type="text" name="nome" id="nome" required><br>
 
             <label for="foto">Foto de perfil:</label><br>
-            <input type="file" id="foto" name="foto"><br>
+            <input type="file" id="foto" name="foto" required><br>
 
             <label for="cor">Cor:</label><br>
-            <input type="color" name="cor" id="cor"><br>
+            <input type="color" name="cor" id="cor" value="red" required><br>
 
             <button name="submit">Cadastrar</button>
         </form>
