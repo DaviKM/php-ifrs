@@ -5,6 +5,14 @@ if ($_SESSION['login'] != 'enviador_de_arquivos') {
 }
 $arquivos = scandir('arquivos/');
 
+// Alternar ordem
+$ordem = isset($_GET['ordem']) ? $_GET['ordem'] : 'asc';
+if ($ordem === 'desc') {
+    rsort($arquivos);
+} else {
+    asort($arquivos);
+}
+
 $extensoes = [
     'imagens' => ["jpg", "jpeg", "png"],
     'pdf' => '<i class="fa-brands fa-dochub"></i>',
@@ -52,6 +60,9 @@ $extensoes = [
             <button type="button">Voltar</button>
         </a>
         <button onclick="trocarDisplay()" type="button">Trocar Visualização</button>
+        <a href="?ordem=<?= $ordem === 'asc' ? 'desc' : 'asc'; ?>">
+            <button type="button">Ordem: <?= $ordem ?></button>
+        </a>
     </nav>
 </body>
 <script>

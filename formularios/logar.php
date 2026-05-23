@@ -6,8 +6,18 @@
     <title>Logado</title>
 </head>
 <body>
-    <h1><?php echo $_POST['nome']?></h1>
-    <p>Idade: <?php echo $_POST['idade']?></p>
+    <h1><?= $_POST['nome']?></h1>
+    <p>Idade: <?=  $_POST['idade']?></p>
     <p>Esportes</p>
+    <ul>
+        <?php 
+            foreach($_POST['esporte'] as $esporte){
+                echo "<li>$esporte</li>" ;
+            }
+        ?>
+    </ul>
+    <p>Sorvete preferido: <?= $_POST['saborFav'] ?></p>
+    <p><strong>Sobre você</strong></p>
+    <p><?= $_POST['sobrevc'] ?></p>
 </body>
 </html>
