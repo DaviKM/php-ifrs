@@ -1,4 +1,7 @@
-<?php require_once 'conexao.php'?>
+<?php require_once 'conexao.php' ;
+session_start() ;
+session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
