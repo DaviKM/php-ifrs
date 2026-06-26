@@ -106,3 +106,9 @@ ALTER TABLE fornecedor_marcas
   ADD CONSTRAINT FK_marcas_TO_fornecedor_marcas
     FOREIGN KEY (marca_id)
     REFERENCES marcas (id);
+
+ALTER TABLE fornecedor_marcas
+ADD PRIMARY KEY (fornecedor_id, marca_id);
+
+ALTER TABLE pedido_produto 
+ADD PRIMARY KEY (pedido_id, produto_id);
