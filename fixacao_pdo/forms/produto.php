@@ -18,7 +18,7 @@
         th,
         td {
             border: 1.5px solid black;
-            padding: 0 140px;
+            padding: 0 130px;
         }
     </style>
 </head>
@@ -37,24 +37,21 @@
         </thead>
         <tbody>
             <?php 
-                try{
-                    $sql = 'SELECT * FROM produto' ;
+                    $sql = 'SELECT * FROM produtos' ;
                     $stmt = $pdo->prepare($sql) ;
                     $stmt->execute();
                     $result = $stmt->fetchAll(PDO::FETCH_ASSOC) ;
                     foreach ($result as $produto):?>
-                <tr>
-                    <td><?= $produto['id'] ?></td>
-                    <td><?= $produto['nome'] ?></td>
-                    <td><?= $produto['preco'] ?></td>
-                    <td><?= $produto['estoque'] ?></td>
-                    <td><?= $produto['fornecedor_id'] ?></td>
-                    <td><?= $produto['marca_id'] ?></td>
-                </tr>
-            <?php endforeach ; 
-            }
-            
-            ?>
+                        <tr>
+                            <td><?= $produto['id'] ?></td>
+                            <td><?= $produto['nome'] ?></td>
+                            <td><?= $produto['preco'] ?></td>
+                            <td><?= $produto['estoque'] ?></td>
+                            <td><?= $produto['fornecedor_id'] ?></td>
+                            <td><?= $produto['marcas_id'] ?></td>
+                        </tr>
+                    <?php endforeach ;?>
+
         </tbody>
     </table>
 </body>
